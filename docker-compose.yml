@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+
+  web:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/app
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - php
+
+  php:
+    image: php:7-fpm
+    container_name: php7
+    volumes:
+    - .:/app

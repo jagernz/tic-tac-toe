@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1a860a14-285b-4f45-84f1-d1394d186c23",
+		"name": "TicTacToe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tic-tac-toe.local:8080/api/v1/games/",
+					"protocol": "http",
+					"host": [
+						"tic-tac-toe",
+						"local"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://tic-tac-toe.local:8080/api/v1/games/",
+					"protocol": "http",
+					"host": [
+						"tic-tac-toe",
+						"local"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://tic-tac-toe.local:8080/api/v1/games/5bccad74149e6e90a2c67c0070dc6a96/",
+					"protocol": "http",
+					"host": [
+						"tic-tac-toe",
+						"local"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"games",
+						"5bccad74149e6e90a2c67c0070dc6a96",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a new move to a game.",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "board",
+							"value": "XX0X--0X0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tic-tac-toe.local:8080/api/v1/games/5bccad74149e6e90a2c67c0070dc6a96/",
+					"protocol": "http",
+					"host": [
+						"tic-tac-toe",
+						"local"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"games",
+						"5bccad74149e6e90a2c67c0070dc6a96",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "board",
+							"value": "XO--X--OX",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tic-tac-toe.local:8080/api/v1/games/5d7a0d90eb0ab915f6277454efb7a457/",
+					"protocol": "http",
+					"host": [
+						"tic-tac-toe",
+						"local"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"games",
+						"5d7a0d90eb0ab915f6277454efb7a457",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
