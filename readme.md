@@ -1,21 +1,18 @@
-# Lumen PHP Framework
+## Рекомендации для запуска приложения
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+* После того как спулите приложение, выполните комманду - `docker-compose up -d`
+* Пропишите в файл hosts - `127.0.0.1 tic-tac-toe.local`, в браузере набирайте `http://tic-tac-toe.local:8080/`, далее роутинг согласно задания и файла 
+  `/public/tictactoe.yaml`
+* Можете ворспользоваться коллекцией сохраненных запросов. Лежит в папке `/public/TicTacToe.postman_collection.json`
+* В качестве хранилища использовал файл `games.txt`, генерируется автоматически
+* Время примерно затратил 8 часов, использовал Lumen, так как по нему задавали вопросы на собеседовании
+* Логика компьютера для ответа человеку использовалась случайная, без учета оптимального хода
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Game flow
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* The client (player) starts a game, makes a request to server to initiate a TicTakToe board. ( Client (player) will always use cross )
+* The backend responds with the location URL of the started game.
+* Client gets the board state from the URL.
+* Client makes a move; move is sent back to the server.
+* Backend validates the move, makes it's own move and updates the game state. The updated game state is returned in the response.
+* And so on. The game is over once the computer or the player gets 3 noughts or crosses, horizontally, vertically or diagonally or there are no moves to be made.
