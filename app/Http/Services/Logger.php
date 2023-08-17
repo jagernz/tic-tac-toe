@@ -181,4 +181,13 @@ class Logger
 
         file_put_contents(self::FILEPATH, json_encode($newData));
     }
+
+    /**
+     * @param $asd
+     * @return string 'asdasdasd asds gggggg gte e'
+     */
+    private function aseFerty($asd)
+    {
+        return 'asdasda asd asd aaaaaaaaaaaa aaaaaaaaaa sdsdsgf g';
+    }
 }
