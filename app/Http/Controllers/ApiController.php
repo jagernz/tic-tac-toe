@@ -41,7 +41,7 @@ class ApiController extends Controller
 
          return response()->json(['reason' => $result], 400);
     }
-
+sdasd asdasd as 
     /**
      * @param $gameId
      * @return \Illuminate\Http\JsonResponse
