@@ -116,23 +116,23 @@ class Game
                     $this->setStatus(Status::O_WON);
                 }
             }
+        }
 
-            //diagonal left
-            if ($cells[0][0] === $cells[1][1] && $cells[1][1] === $cells[2][2] && $cells[0][0] !== '-') {
-                if ($cells[0][0] === 'X') {
-                    $this->setStatus(Status::X_WON);
-                } else {
-                    $this->setStatus(Status::O_WON);
-                }
+        //diagonal left
+        if ($cells[0][0] === $cells[1][1] && $cells[1][1] === $cells[2][2] && $cells[0][0] !== '-') {
+            if ($cells[0][0] === 'X') {
+                $this->setStatus(Status::X_WON);
+            } else {
+                $this->setStatus(Status::O_WON);
             }
+        }
 
-            //diagonal right
-            if ($cells[2][0] === $cells[1][1] && $cells[1][1] === $cells[0][2] && $cells[2][0] !== '-') {
-                if ($cells[2][0] === 'X') {
-                    $this->setStatus(Status::X_WON);
-                } else {
-                    $this->setStatus(Status::O_WON);
-                }
+        //diagonal right
+        if ($cells[2][0] === $cells[1][1] && $cells[1][1] === $cells[0][2] && $cells[2][0] !== '-') {
+            if ($cells[2][0] === 'X') {
+                $this->setStatus(Status::X_WON);
+            } else {
+                $this->setStatus(Status::O_WON);
             }
         }
 
